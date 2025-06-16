@@ -13,12 +13,17 @@ const REMOTE_TESTS_URL = process.env.REMOTE_TESTS_URL || null
 const BASE_TESTS_FOLDER = process.env.BASE_TESTS_FOLDER || 'tests'
 
 // Обслуживаем статические файлы из папки public
-app.use(express.static(path.join(__dirname, 'public')))
+app.use('/public', express.static(path.join(__dirname, 'public')))
 app.use('/tests', express.static(path.join(__dirname, BASE_TESTS_FOLDER)))
 
 // Главная страница
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, 'public', 'index.html'))
+	res.sendFile(path.join(__dirname, 'index.html'))
+})
+
+// Страница теста
+app.get('/test.html', (req, res) => {
+	res.sendFile(path.join(__dirname, 'test.html'))
 })
 
 if (REMOTE_TESTS_URL) {
