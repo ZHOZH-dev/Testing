@@ -1,0 +1,22 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	margin-left: 40px;
+}
+
+.test-buttons {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.test-button {
+	background-color: #f0f0f0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 10px;
+	margin: 5px 0;
+	cursor: pointer;
+	width: 400px;
+}

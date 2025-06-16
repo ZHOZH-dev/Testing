@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Выбор теста</title>
+		<link rel="stylesheet" href="StylesMain.css" />
+	</head>
+	<body>
+		<h1>Выберите тест</h1>
+		<div id="test-buttons-container" class="test-buttons"></div>
+		<script>
+			// Получаем список тестов с сервера и динамически создаем кнопки
+			fetch('/tests')
+				.then(response => response.json())
+				.then(testFolders => {
+					const container = document.getElementById('test-buttons-container')
+					container.innerHTML = ''
+					testFolders.forEach(folder => {
+						const btn = document.createElement('button')
+						btn.className = 'test-button'
+						btn.textContent = folder
+						btn.addEventListener('click', () => {
+							window.location.href = `/test.html?test=${encodeURIComponent(
+								folder
+							)}`
+						})
+						container.appendChild(btn)
+					})
+				})
+				.catch(err => console.error('Ошибка загрузки списка тестов:', err))
+		</script>
+	</body>
+</html>

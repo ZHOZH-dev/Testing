@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Тестирование</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="index.js" type="module"></script>
+	</head>
+	<body>
+		<nav class="nav-bar">
+			<!-- <div class="nav-button" class="open-file" type="file">
+				<input type="file" class="file-upload" webkitdirectory multiple />
+				<img src="imgs/icons8-открыть-папку-50.png" alt="открыть" />
+				<div>Открыть тест</div>
+			</div> -->
+			<div class="nav-button start-button">
+				<img src="imgs/icons8-начало-64.png" alt="начать" />
+				<div>Начать тестирование</div>
+			</div>
+			<div class="nav-button end-button">
+				<img src="imgs/icons8-стоп-64.png" alt="завершить" />
+				<div>Завершить тестирование</div>
+			</div>
+			<!-- <div class="nav-button grade">
+				<img src="imgs/icons8-лупа-64.png" alt="оценка" />
+				<div>Оценка</div>
+			</div>
+			<div class="nav-button result">
+				<img src="imgs/icons8-тест-частично-пройден-100.png" alt="результат" />
+				<div>Результат</div>
+			</div> -->
+		</nav>
+		<section class="info">
+			<div class="student-info">
+				Тестируемый
+				<div>
+					<div class="student-info-left">
+						<div class="personal-info">
+							<input
+								class="personal-info-inp"
+								type="text"
+								placeholder="Фамилия"
+							/>
+						</div>
+						<div class="personal-info">
+							<input class="personal-info-inp" type="text" placeholder="Имя" />
+						</div>
+					</div>
+					<div class="student-info-right">
+						<div class="personal-info">
+							<input
+								class="personal-info-inp"
+								type="text"
+								placeholder="Отчество"
+							/>
+						</div>
+						<div class="personal-info">
+							<input
+								class="personal-info-inp"
+								type="number"
+								placeholder="Группа"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="test-info">
+				<div>
+					<label for="test-name">Название теста</label>
+					<input type="text" class="test-name" id="test-name" readonly />
+				</div>
+				<div>
+					<label for="test-creator">Составитель теста</label>
+					<input class="test-creator" type="text" id="test-creator" readonly />
+				</div>
+			</div>
+			<div class="timer-box">
+				<h1 id="timer">00:00:00</h1>
+			</div>
+		</section>
+		<section class="question-section">
+			<div class="previous-button">
+				<img src="imgs/icons8-стрелка-влево-в-круге-2-100.png" alt="previous" />
+			</div>
+			<div class="questions">
+				<div class="questions-scroll"></div>
+			</div>
+			<div class="next-button">
+				<img src="imgs/icons8-стрелка-вправо-в-круге-2-100.png" alt="next" />
+			</div>
+			<div class="response-area">
+				<div class="question-info"></div>
+				<input type="text" class="question-name" disabled="disabled" />
+				<div class="answers">
+					<div></div>
+				</div>
+			</div>
+		</section>
+		<section class="test-result"></section>
+		<div class="warning-end-window-box">
+			<div class="warning-end-window-main">
+				Завершить тестирование?
+				<div class="btn-container">
+					<button class="cancel-btn">Отмена</button>
+					<button class="ok-btn">Завершить</button>
+				</div>
+			</div>
+		</div>
+		<footer></footer>
+	</body>
+</html>
